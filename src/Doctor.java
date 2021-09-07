@@ -4,6 +4,10 @@ public class Doctor {
     String name;
     String speciality;
 
+    public Doctor() {
+
+    }
+
     public Doctor(String name, String speciality) {
         this.name = name;
         this.speciality = speciality;
