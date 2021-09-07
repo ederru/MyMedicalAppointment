@@ -1,8 +1,12 @@
+import java.util.Date;
+
 public class Doctor {
     //Atributos
-    static int id = 0;//AutoIncrement
-    String name;
-    String speciality;
+    private static int id = 0;//AutoIncrement
+    private String name;
+    private String speciality;
+    private Date date;
+    private String time;
 
     public Doctor() {
 
