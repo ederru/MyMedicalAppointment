@@ -1,16 +1,18 @@
 public class Patient {
-    String name;
-    String email;
-    String adress;
-    String phoneNumber;
-    String birthday;
-    double weight;
-    double height;
-    String blod;
+    private static int id;
+    private String name;
+    private String email;
+    private String adress;
+    private String phoneNumber;
+    private String birthday;
+    private double weight;
+    private double height;
+    private String blod;
 
     public Patient(String name, String email) {
         this.name = name;
         this.email = email;
+        id++;
     }
 
     public String getName() {
@@ -42,7 +44,12 @@ public class Patient {
     }
 
     public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+        if(phoneNumber.length() == 8){
+            this.phoneNumber = phoneNumber;
+        } else {
+            System.out.println("Ingresa un numero valido");
+        }
+
     }
 
     public String getBirthday() {
@@ -60,9 +67,17 @@ public class Patient {
     public void setWeight(double weight) {
         this.weight = weight;
     }
+    //Peso en kg
+    public String getWeightKG(){
+        return this.weight + "KG";
+    }
 
     public double getHeight() {
         return height;
+    }
+    //Altura en cm
+    public String getHeightCM(){
+        return this.getHeight() + "cm";
     }
 
     public void setHeight(double height) {
@@ -76,5 +91,16 @@ public class Patient {
     public void setBlod(String blod) {
         this.blod = blod;
     }
-}
+    //Regresa id,nomre y email
+    public void namEmail() {
+        System.out.println("ID Patient: " + getId() + " Name: " + getName() + " Email: " + getEmail());
+    }
 
+    public static int getId() {
+        return id;
+    }
+
+    public static void setId(int id) {
+        Patient.id = id;
+    }
+}
