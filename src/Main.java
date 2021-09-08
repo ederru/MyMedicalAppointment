@@ -1,4 +1,5 @@
-package model;
+import model.Doctor;
+import model.Patient;
 
 import java.util.Date;
 
