@@ -1,55 +1,12 @@
-public class Patient {
-    private static int id;
-    private String name;
-    private String email;
-    private String adress;
-    private String phoneNumber;
+public class Patient extends  User {
+
     private String birthday;
     private double weight;
     private double height;
     private String blod;
 
     public Patient(String name, String email) {
-        this.name = name;
-        this.email = email;
-        id++;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getAdress() {
-        return adress;
-    }
-
-    public void setAdress(String adress) {
-        this.adress = adress;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        if(phoneNumber.length() == 8){
-            this.phoneNumber = phoneNumber;
-        } else {
-            System.out.println("Ingresa un numero valido");
-        }
-
+        super(name, email);
     }
 
     public String getBirthday() {
@@ -96,11 +53,4 @@ public class Patient {
         System.out.println("ID Patient: " + getId() + " Name: " + getName() + " Email: " + getEmail());
     }
 
-    public static int getId() {
-        return id;
-    }
-
-    public static void setId(int id) {
-        Patient.id = id;
-    }
 }
