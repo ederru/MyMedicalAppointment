@@ -54,4 +54,10 @@ public class User {
             System.out.println("Ingresa un numero valido");
         }
     }
+
+    @Override
+    public String toString() {
+        return "name= " + name + " email= " + email + "\n" +
+                "adress= " + adress  + " phoneNumber= " + phoneNumber;
+    }
 }

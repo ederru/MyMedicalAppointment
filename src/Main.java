@@ -15,9 +15,8 @@ public class Main {
 
 
         Patient patient = new Patient("Ricardo Villalobos", "villardo@gmail.com");
-        patient.namEmail();
         patient.setPhoneNumber("52147898");
-        System.out.println(patient.getPhoneNumber());
+        System.out.println(patient);
         //showMenu();
     }
 }

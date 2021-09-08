@@ -48,9 +48,13 @@ public class Patient extends  User {
     public void setBlod(String blod) {
         this.blod = blod;
     }
-    //Regresa id,nomre y email
-    public void namEmail() {
-        System.out.println("ID Patient: " + getId() + " Name: " + getName() + " Email: " + getEmail());
-    }
 
+    @Override
+    public String toString() {
+        return super.toString() +
+                "\nbirthday= " + birthday +
+                "\nweight=" + weight +
+                "\nheight=" + height +
+                "\nblod='" + blod;
+    }
 }
