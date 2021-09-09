@@ -20,8 +20,8 @@ public class UIMenu {
 
         int response = 0;
         do {
-            System.out.println("1. model.Doctor");
-            System.out.println("2. model.Patient");
+            System.out.println("1. Doctor");
+            System.out.println("2. Patient");
             System.out.println("0. Salir");
 
             Scanner sc = new Scanner(System.in);
@@ -73,7 +73,7 @@ public class UIMenu {
                         emailCorrect = true;
                         //obtener el usuario loggeado
                         doctorLogged = d;
-                        //showDoctorMenu
+                        UIDoctorMenu.showDoctorMenu();
                     }
                 }
             }
@@ -83,7 +83,7 @@ public class UIMenu {
                         emailCorrect = true;
                         //obtener el usuario loggeado
                         patientLogged = p;
-                        //Show Patient Menu
+                        UIPatientMenu.showPatientMenu();
                     }
                 }
             }
