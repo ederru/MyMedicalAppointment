@@ -34,6 +34,12 @@ public class Doctor extends  User {
         return availableAppoiments;
     }
 
+    @Override
+    public void showDataUser() {
+        System.out.println("Hospital: Ricardo Contreras");
+        System.out.println("Departamento: Oncología");
+    }
+
 
     public static class AvailableAppoiment {
         //Avaliable Appointment
